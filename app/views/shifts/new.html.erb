@@ -1,0 +1,14 @@
+<%= form_with model: @shift do |form| %>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title %>
+  <%= form.label :start_date, "Start" %>
+  <%= form.datetime_local_field :start_date %>
+  <%= form.label :end_date, "End" %>
+  <%= form.datetime_local_field :end_date %>
+  <%= form.submit "Create" %>
+<% end %>
+
+
+
+
+<%# datetime start, datetime end, title, eventually member... %>
