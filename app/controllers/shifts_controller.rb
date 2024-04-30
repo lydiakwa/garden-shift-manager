@@ -1,4 +1,12 @@
 class ShiftsController < ApplicationController
+  # before_action :check_for_cancel, only: [ :create, :update ]
+
+  # def check_for_cancel
+  #   if params[:commit] == "Cancel"
+  #     redirect_to shifts_path
+  #   end
+  # end
+
   def index
     # GET all
     @shifts = Shift.all
