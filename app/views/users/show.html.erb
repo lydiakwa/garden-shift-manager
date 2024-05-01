@@ -1,0 +1,21 @@
+<div class="bg-neutral-100 rounded-lg w-full h-max flex flex-row p-4 gap-x-4">
+  <div class="bg-white rounded-full h-20 w-20">
+  </div>
+  <div class="self-center">
+    <p>
+      <%= "#{@user.first_name} #{@user.last_name}" %>
+    </p>
+    <div class="flex flex-row gap-x-1">
+      <p class="font-semibold	">Tel:</p>
+      <p>
+        <%= @user.telephone %>
+      </p>
+    </div>
+    <div class="flex flex-row gap-x-1 ">
+      <p class="font-semibold	">Email:</p>
+      <p class="text-wrap">
+        <%= @user.email %>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="w-full h-full">
+  <h1 class="text-center text-lg font-semibold pt-4 pb-6">Membership List</h1>
+  <ul class="flex flex-col gap-y-4 ">
+    <% @users.each do |user| %>
+    <li class="bg-neutral-300 rounded p-4 flex flex-row gap-x-4 justify-start content-center">
+      <div class="bg-white rounded-full h-12 w-12"></div>
+      <p class="self-center	">
+      <%= link_to("#{user.first_name} #{user.last_name}", user_path(user)) %>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+</div>
