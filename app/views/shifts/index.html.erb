@@ -1,0 +1,8 @@
+<h1>shifts</h1>
+<% @shifts.each do |shift| %>
+  <%= link_to(shift.title, shift_path(shift))%>
+<% end %>
+<%= link_to "Create new shift", new_shift_path, class: 'button' %>
+
+<%# link_to(shift_path(shift)) how reals rails people write it%> 
+<%# <%= link_to(shift.title, "/shifts/#{shift.id}"  )  %>
