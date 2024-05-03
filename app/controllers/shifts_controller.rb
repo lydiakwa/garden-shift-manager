@@ -1,12 +1,4 @@
 class ShiftsController < ApplicationController
-  # before_action :check_for_cancel, only: [ :create, :update ]
-
-  # def check_for_cancel
-  #   if params[:commit] == "Cancel"
-  #     redirect_to shifts_path
-  #   end
-  # end
-
   def index
     # GET all
     @shifts = Shift.all
@@ -26,7 +18,8 @@ class ShiftsController < ApplicationController
   end
 
   def create
-    @shift = Shift.new(title: params[:shift][:title], start_date: params[:shift][:start_date], end_date: params[:shift][:end_date])
+    # @shift = Shift.new(title: params[:shift][:title], start_date: params[:shift][:start_date], end_date: params[:shift][:end_date])
+    @shift = Shift.new(shift_params)
     if @shift.save
       redirect_to shifts_path
     else
@@ -35,5 +28,10 @@ class ShiftsController < ApplicationController
     # code to create a new post based on the parameters that
     # were submitted with the form (and are now available in the
     # params hash)
+  end
+
+  private
+  def shift_params
+    params.require(:shift).permit(:title, :start_date, :end_date)
   end
 end

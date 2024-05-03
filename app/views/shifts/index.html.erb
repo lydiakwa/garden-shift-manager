@@ -3,6 +3,6 @@
   <%= link_to(shift.title, shift_path(shift)) %>
 <% end %>
 <%= link_to "Create new shift", new_shift_path, class: "button" %>
-
+<%= button_to "logout", destroy_user_session_path, method: :delete, class: "rounded p-2 bg-red-600" %>
 <%# link_to(shift_path(shift)) how reals rails people write it%>
 <%# <%= link_to(shift.title, "/shifts/#{shift.id}"  )  %>

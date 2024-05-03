@@ -1,0 +1,46 @@
+<div class="h-full w-full">
+<h2 class="text-center text-lg font-semibold p-4">Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "bg-[#D9D9D9] p-11 rounded-xl flex flex-col	" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="pb-2">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name", class: "border-0 rounded w-full" %>
+  </div>
+
+  <div class="pb-2">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name", class: "border-0 rounded w-full" %>
+  </div>
+
+  <div class="pb-2">
+    <%= f.label :email %><br>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "border-0 rounded w-full" %>
+  </div>
+
+  <div class="pb-2">
+    <%= f.label :telephone %><br>
+    <%= f.telephone_field :telephone, autofocus: true, class: "border-0 rounded w-full" %>
+  </div>
+
+  <div class="pb-2">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br>
+    <%= f.password_field :password, autocomplete: "new-password", class: "border-0 rounded w-full" %>
+  </div>
+
+  <div class="pb-2">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "border-0 rounded w-full" %>
+  </div>
+
+  <div class="rounded p-2 bg-emerald-800 text-white w-fit self-end">
+    <%= f.submit "Create Account" %>
+  </div>
+<% end %>
+  <div class="w-full text-center underline pt-2"><%= render "devise/shared/links" %></div>
+
+</div>
