@@ -1,24 +1,21 @@
-# README
+# Garden Shift Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### About 
+A one stop shop for managing your garden members and their membership duties! This project was borne out of a fantasy that I could get my community garden to house information (such as contact details, events, and shift logging) in one place. It is also a vehicle for me to learn Ruby on Rails. That latter part will at least come true! 
 
-Things you may want to cover:
+Some of the basic functionality I aim to have is the following:
 
-* Ruby version
+- House a list of all garden members with their contact information, available to all other members
+- Display all open hour shifts for the season in a calendar view (with options to see day/week/month versions of this view)
+- Allow members to sign up/un-sign up for said shifts
+- Admin members (i.e. the Steering Committee) to monitor members are fulfilling their membership duties (attending at least x open hour shifts)
 
-* System dependencies
+Why learn Ruby on Rails? I want to learn a new language. I only really know Javascript and its libraries and I have gotten very comfortable with those tools. 
 
-* Configuration
+I will also be documenting my progress with this project and the blog page will be up shortly!
 
-* Database creation
+### Project Demo
+TBD
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Documentation
+TBD
