@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Users::PasswordsController < Devise::PasswordsController
+  skip_before_action :redirect_unless_signed_in
   # GET /resource/password/new
   # def new
   #   super

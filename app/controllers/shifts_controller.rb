@@ -1,4 +1,7 @@
 class ShiftsController < ApplicationController
+  # before action -- cehcking if there's a session or redirect to the users/sign_in
+  # before_action :redirect_unless_signed_in
+
   def index
     # GET all
     @shifts = Shift.all
